@@ -10,4 +10,4 @@ ReAnime paints captions on a canvas over the video. Chrome's PiP window only sho
 2. Open `reanime-pip-captions.user.js` and confirm the install. (or copy the script contents into a new script)
 3. Reload the ReAnime tab, start the episode, and use the player's PiP button.
 
-Matches `reanime.to` and the `flixcloud.cc` player. (give me other sites you want and ill add them!!)
+Matches `reanime.to`, `reanime.cz`, `reanime.wtf`, and the `flixcloud.cc` player.

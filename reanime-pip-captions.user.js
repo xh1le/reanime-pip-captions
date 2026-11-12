@@ -1,10 +1,14 @@
 // ==UserScript==
 // @name         ReAnime PiP Captions
 // @namespace    https://reanime.to/
-// @version      1.3.0
+// @version      1.4.0
 // @description  Keep the player's live captions in Picture-in-Picture, including size, timing, language and quality.
 // @match        https://reanime.to/*
 // @match        https://*.reanime.to/*
+// @match        https://reanime.cz/*
+// @match        https://*.reanime.cz/*
+// @match        https://reanime.wtf/*
+// @match        https://*.reanime.wtf/*
 // @match        https://flixcloud.cc/*
 // @match        https://*.flixcloud.cc/*
 // @run-at       document-start
@@ -22,7 +26,8 @@
  * Size, offset, language and quality stay in sync because every frame copies
  * the layer the player is already rendering, not a saved setting.
  *
- * On reanime.to the script only makes sure the embed is allowed to open PiP.
+ * On reanime.to, reanime.cz, and reanime.wtf the script only makes sure the
+ * embed is allowed to open PiP.
  * It has to run at document-start: libpgs sends its canvas to a worker if
  * transferControlToOffscreen exists, and a transferred canvas cannot be read.
  */
@@ -33,7 +38,7 @@
   window.__reanimePipCaptions = true;
 
   var host = location.hostname;
-  if (/(^|\.)reanime\.to$/i.test(host)) {
+  if (/(^|\.)reanime\.(to|cz|wtf)$/i.test(host)) {
     armEmbeds();
     return;
   }
