@@ -6,7 +6,7 @@ ReAnime paints captions on a canvas over the video. Chrome's PiP window only sho
 
 ## Install
 
-1. Install [Tampermonkey](https://www.tampermonkey.net/) in Chrome. (or something like violentmonkey/greasemonkey)
+1. Install [Tampermonkey](https://www.tampermonkey.net/) in Chrome. (or something like violentmonkey/greasemonkey, it should work the same on all 3 of them)
 2. Open `reanime-pip-captions.user.js` and confirm the install. (or copy the script contents into a new script)
 3. Reload the ReAnime tab, start the episode, and use the player's PiP button.
 
